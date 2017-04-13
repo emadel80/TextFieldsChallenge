@@ -12,6 +12,8 @@
 		8832559E1EA0231C00F4E78F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8832559C1EA0231C00F4E78F /* Main.storyboard */; };
 		883255A01EA0231C00F4E78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8832559F1EA0231C00F4E78F /* Assets.xcassets */; };
 		883255A31EA0231C00F4E78F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883255A11EA0231C00F4E78F /* LaunchScreen.storyboard */; };
+		883255AB1EA02E0800F4E78F /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883255AA1EA02E0800F4E78F /* ZipCodeTextFieldDelegate.swift */; };
+		883255AE1EA02FC000F4E78F /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883255AD1EA02FC000F4E78F /* CashTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8832559F1EA0231C00F4E78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		883255A21EA0231C00F4E78F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		883255A41EA0231C00F4E78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883255AA1EA02E0800F4E78F /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		883255AD1EA02FC000F4E78F /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		883255971EA0231C00F4E78F /* TextFieldsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				883255AC1EA02E1800F4E78F /* Delegates */,
 				883255981EA0231C00F4E78F /* AppDelegate.swift */,
 				8832559A1EA0231C00F4E78F /* ViewController.swift */,
 				8832559C1EA0231C00F4E78F /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				883255A41EA0231C00F4E78F /* Info.plist */,
 			);
 			path = TextFieldsChallenge;
+			sourceTree = "<group>";
+		};
+		883255AC1EA02E1800F4E78F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				883255AA1EA02E0800F4E78F /* ZipCodeTextFieldDelegate.swift */,
+				883255AD1EA02FC000F4E78F /* CashTextFieldDelegate.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8832559B1EA0231C00F4E78F /* ViewController.swift in Sources */,
+				883255AE1EA02FC000F4E78F /* CashTextFieldDelegate.swift in Sources */,
+				883255AB1EA02E0800F4E78F /* ZipCodeTextFieldDelegate.swift in Sources */,
 				883255991EA0231C00F4E78F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,18 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+// MARK: ViewController : UIViewController, UITextFieldDelegate -
+class ViewController: UIViewController, UITextFieldDelegate {
 
+  // MARK: - Outlets -
+  @IBOutlet weak var zipCodeTextField:  UITextField!
+  @IBOutlet weak var cashTextField:     UITextField!
+  @IBOutlet weak var lockableTextField: UITextField!
+  @IBOutlet weak var lockableSwitch:    UISwitch!
+  
+  // MARK: - Text Field Delegate Objects -
+  let zipCodeTextFieldDelegate = ZipCodeTextFieldDelegate()
+  let cashTextFieldDelegate    = CashTextFieldDelegate()
+  
+  // MARK: - Life Cycle -
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    zipCodeTextField.delegate  = zipCodeTextFieldDelegate
+    cashTextField.delegate     = cashTextFieldDelegate
+    lockableTextField.delegate = self
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
+  
+  // MARK: - Text Field Delegate Methods -
 }
 
