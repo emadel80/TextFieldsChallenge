@@ -17,6 +17,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var lockableTextField: UITextField!
   @IBOutlet weak var lockableSwitch:    UISwitch!
   
+  // MARK: - Text Field Properties
+  var enableTextFieldEditing : Bool {
+    if lockableSwitch.isOn {
+      return true
+    }
+    
+    return false
+  }
+  
   // MARK: - Text Field Delegate Objects -
   let zipCodeTextFieldDelegate = ZipCodeTextFieldDelegate()
   let cashTextFieldDelegate    = CashTextFieldDelegate()
@@ -31,5 +40,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
   }
   
   // MARK: - Text Field Delegate Methods -
+  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    return enableTextFieldEditing
+  }
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    return enableTextFieldEditing
+  }
 }
-
